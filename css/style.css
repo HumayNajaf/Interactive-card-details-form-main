@@ -21,18 +21,19 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   padding: 20px;
-  z-index: 1;
   position: relative;
   top: 6.5rem;
   left: 9rem;
-  width: 30vw;
+  width: 32rem;
 }
 .card-front p {
+  position: relative;
   letter-spacing: 3px;
   font-size: 1.5rem;
   margin-top: 3rem;
 }
 .user-info {
+  position: relative;
   display: flex;
   gap: 9.3rem;
 }
@@ -41,11 +42,10 @@ main {
   position: relative;
   top: 7rem;
   left: 13.5rem;
-  z-index: 2;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 31.5vw;
-  height: 31.5vh;
+  width: 32rem;
+  height: 13rem;
 }
 .card-back p {
   position: relative;
@@ -61,27 +61,75 @@ form {
   gap: 20px;
 }
 label {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .date-cvc {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 input {
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid hsl(270, 3%, 87%);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid hsl(270, 3%, 87%);
+}
+input:focus {
+  border: 1px solid linear-gradient
+    (to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
 }
 .month-year {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
-.month, .year {
-    width: 5rem;
+.month,
+.year {
+  width: 5rem;
 }
 .button {
-    background-color: hsl(278, 68%, 11%);
-    color: #fff;
-    cursor: pointer;
+  background-color: hsl(278, 68%, 11%);
+  color: #fff;
+  cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (max-width: 1440px) {
+  body {
+    min-width: 1440px;
+  }
+}
+@media screen and (max-width: 515px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-bg {
+    background-image: url(/images/bg-main-mobile.png);
+    background-size: contain;
+    min-width: 515px;
+  }
+  .card-front {
+    z-index: 2;
+    top: 150px;
+    left: 1rem;
+  }
+  .card-back {
+    position: absolute;
+    top: 2rem;
+    left: 7.5rem;
+  }
+  .card-back p {
+    top: 4.7rem;
+  }
+} */
